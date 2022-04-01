@@ -75,7 +75,7 @@ function App() {
     .then(response => {
       var resposta = response.data;
       var dadosAuxiliar = data;
-      dadosAuxiliar.map(aluno => {
+      dadosAuxiliar.map(aluno =>  {
         if(aluno.id === alunoSelecionado.id){
           aluno.nome = resposta.nome;
           aluno.email = resposta.email;
