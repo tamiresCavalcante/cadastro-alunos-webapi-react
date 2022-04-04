@@ -22,7 +22,6 @@ F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\Al
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
-F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Newtonsoft.Json.dll
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -64,3 +63,4 @@ F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\Al
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+F:\DocumentosDeProgramacao\Programacao\back\api-alunos-react-aspnet\AlunosApi\AlunosApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
