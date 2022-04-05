@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import './styles.css';
 import logoimagem from '../../assets/usuario.png';
 import api from '../../services/api';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export default function Login(){
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const history = useHistory();
+    const history = useNavigate();
 
     async function login(event){
         event.preventDefault();
@@ -22,6 +22,7 @@ export default function Login(){
             localStorage.setItem('email', email);
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('expiration', response.data.expiration);
+            history('/alunos');
 
         } catch(error) {
             alert('O login falhou' + error)
@@ -42,7 +43,7 @@ export default function Login(){
                     value={password} 
                     onChange={e => setPassword(e.target.value)} />
 
-                    <button class="button" type="submit">Login</button>
+                    <button className="button" type="submit">Login</button>
                 </form>
             </section>
         </div>
