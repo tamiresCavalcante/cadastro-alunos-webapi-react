@@ -51,7 +51,7 @@ namespace AlunosApi
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = Configuration["Jwt:Issuer"],
-                        ValidAudience = Configuration["Jwt:Issuer"],
+                        ValidAudience = Configuration["Jwt:Audience"],
                         IssuerSigningKey = new SymmetricSecurityKey(
                             Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                     };
@@ -64,7 +64,7 @@ namespace AlunosApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AlunosApi", Version = "v1" });
 
-                // Habilitar autorização usnado Swagger (JWT)
+                // Habilitar autorização usando Swagger (JWT)
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
                     Name = "Authorization",
@@ -117,6 +117,7 @@ namespace AlunosApi
             app.UseRouting();
 
             app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

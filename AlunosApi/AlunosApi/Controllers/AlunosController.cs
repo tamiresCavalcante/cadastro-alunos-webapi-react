@@ -34,6 +34,7 @@ namespace AlunosApi.Controllers
             }
             catch
             {
+                //return BadRequest("Request invalido");
                 return StatusCode(StatusCodes.Status500InternalServerError, "Erro ao obter aluno");
             } 
         }
@@ -80,8 +81,7 @@ namespace AlunosApi.Controllers
             try
             {
                 await _alunoService.CreateAluno(aluno);
-                return CreatedAtRoute(nameof(GetAluno), new { id = aluno.Id }, aluno);
-                
+                return CreatedAtRoute(nameof(GetAluno), new { id = aluno.Id }, aluno);    
             }
             catch
             {

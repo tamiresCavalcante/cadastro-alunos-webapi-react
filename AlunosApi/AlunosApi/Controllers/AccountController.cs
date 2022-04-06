@@ -20,10 +20,10 @@ namespace AlunosApi.Controllers
         private readonly IConfiguration _configuration;
         private readonly IAuthenticate _authentication;
 
-        public AccountController(IAuthenticate authentication, IConfiguration configuration)
+        public AccountController(IConfiguration configuration, IAuthenticate authentication)
         {
-            _authentication = authentication ?? throw new ArgumentNullException(nameof(configuration));
             _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _authentication = authentication ?? throw new ArgumentNullException(nameof(configuration));
         }
 
         [HttpPost("CreateUser")]
@@ -56,7 +56,7 @@ namespace AlunosApi.Controllers
                 return GenerateToken(userInfo);
             } else
             {
-                ModelState.AddModelError(string.Empty, "Login inválido");
+                ModelState.AddModelError("LoginUser", "Login inválido");
                 return BadRequest(ModelState);
             }
         }
@@ -70,7 +70,7 @@ namespace AlunosApi.Controllers
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:key"]));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
