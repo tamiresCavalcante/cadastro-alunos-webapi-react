@@ -26,7 +26,7 @@ export default function Alunos(){
             response => {setAlunos(response.data);}, token)
             console.log(token);
             console.log(alunos);
-    }, []);
+    });
 
     const searchAlunos = (searchValue) => {
         setSearchInput(searchValue);
@@ -78,7 +78,7 @@ export default function Alunos(){
             <header>
                 <AiTwotoneSnippets fontSize={"50px"} />
                 <span>Bem-vindo, <strong>{email}</strong> !</span>
-                <Link className="button" to="aluno/novo">Novo Aluno</Link>
+                <Link className="button" to="aluno/novo/0">Novo Aluno</Link>
                 <button onClick={logout} type="button">
                     <FiXCircle size={35} color="#17202a" />
                 </button>

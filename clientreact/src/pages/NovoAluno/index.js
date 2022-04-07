@@ -26,8 +26,7 @@ export default function NovoAluno(){
             return;
         else
             loadAluno();
-
-    })
+    }, alunoId)
 
     async function loadAluno(){
         try{
@@ -67,7 +66,7 @@ export default function NovoAluno(){
 
     return (
         <div className="novo-aluno-container">
-            <div className="container">
+            <div className="content">
                 <section className="form">
                     <FiUserPlus size="105" color="17202a" />
                     <h1>{alunoId === '0' ? 'Incluir Novo Aluno' : 'Atualizar aluno'}</h1>

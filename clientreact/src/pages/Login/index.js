@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import './styles.css';
 import logoimagem from '../../assets/usuario.png';
 import api from '../../services/api';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Login(){
 
@@ -22,6 +23,7 @@ export default function Login(){
             localStorage.setItem('email', email);
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('expiration', response.data.expiration);
+            console.log(data);
             history('/alunos');
 
         } catch(error) {
