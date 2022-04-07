@@ -9,8 +9,8 @@ export default function RoutesFunction(){
         <BrowserRouter>
             <Routes>
                 <Route path="/" exact element={<Login/>} />
-                <Route path="/alunos" element={<Alunos/>} />
-                <Route path="/aluno/novo/:alunoId" element={<NovoAluno/>} />
+                <Route path="/alunos" exact element={<Alunos/>} />
+                <Route path="/alunos/aluno/novo/:alunoId" exact element={<NovoAluno/>} />
             </Routes>
         </BrowserRouter>
     );
